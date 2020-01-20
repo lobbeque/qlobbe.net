@@ -1,113 +1,307 @@
-a:link {
-	color: #2C3E50;
-	text-decoration: none;
+@font-face {
+  font-family: 'Inter-Regular';
+  font-style:  normal;
+  font-weight: 400;
+  src: url("./fonts/Inter-Regular.woff2") format("woff2"),
+       url("./fonts/Inter-Regular.woff") format("woff");
 }
-a:visited {
-	color: #2C3E50;
-	text-decoration: none;
+
+@font-face {
+  font-family: 'Inter-Bold';
+  font-style:  normal;
+  src: url("./fonts/Inter-Bold.woff2") format("woff2"),
+       url("./fonts/Inter-Bold.woff") format("woff");
 }
-a:hover {
-	color: #2C3E50;
-	text-decoration: none;
+
+@font-face {
+  font-family: 'Garamond';
+  font-style:  normal;
+  src: url("./fonts/Garamond-regular.woff2") format("woff2"),
+       url("./fonts/Garamond-regular.woff") format("woff");
 }
-a:active {
-	color: #2C3E50;
-	text-decoration: none;
+ 
+/* grid */
+
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 2% 2% auto;
+  grid-gap: 10px;
+  height: calc(100vh - 20px);
+  font-family: Georgia,"Times New Roman",times,serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #0d1824;
+}
+
+/* all pages */
+
+.header {
+  grid-row: 1 / 3;
+  grid-column: 4 / 10;
+  font-family: "Inter-Regular";
+  font-size: 14px;
+  text-align: justify;
+}
+
+.band {
+  grid-row: 2 / 3;
+  grid-column: 4 / 10;
+  font-size: 10px;
+  text-align: justify;
 }
 
 .content {
-    font-family: Georgia,"Times New Roman",times,serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    color: #2C3E50;
-    text-align: justify;   
-	max-width: 960px;
-}
-
-.content-block {
-	border-bottom: solid #cacaca 1px;
-}
-
-.head {
-	text-align: justify;
-    margin-top: 50px;
-    max-width: 960px;
-}
-
-.head-menu {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 12px;
-}
-
-.head-menu:hover {
-	color:#318e9a;
-}
-
-.head-title {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 13px; 
-	font-weight: 350;
-}
-
-.head-title:hover {
-	color:#318e9a;
-}
-
-.img {
-	width: 100%;
-	margin-top: 6px;
-}
-
-.img_title {
-	margin-top: 4px;
-}
-
-.img_note {
-	width: 100%;
-}
-
-.note {
-    border-bottom: solid #cacaca 1px;   
-}
-
-.ref {
-	color:#318e9a;
-}
-
-.separator {
-    color: #2C3E50;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8px; 
-    max-width: 960px;
-    position: relative;    
+  grid-row: 3 / 3;
+  grid-column: 4 / 10;
+  background : #fffeb0; 
 }
 
 .title {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    color: #2C3E50;
-    text-align: justify;	
+  text-transform: uppercase; 
+  font-weight: 700;
 }
 
-.title_index {
-	font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    margin-top: 10px; 
+.sub-title {
+  font-family: "Inter-Regular";
+  font-size: 14px;
 }
 
-.title_feed {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    text-align: justify;	
-	color:#318e9a;	
+.header a {
+  text-decoration: none;
+  color: #0d1824;
 }
 
+.header a:hover {
+  color: #f8381f;
+}
 
-ul {
-    margin-left: 0;
-    padding-left: 0;
+.link {
+  color: #318e9a;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 2%;
+  text-align: left;
+}
+
+/* index */
+
+.index-img {
+  grid-row: 3 / 3;
+  grid-column: 4 / 9;  
+}
+
+.index-caption {
+  grid-row: 3 / 3;
+  grid-column: 9 / 10; 
+  margin-top: 10px;
+  font-family: "Inter-Regular";
+  font-size: 10px;
+}
+
+.index-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* bio */
+
+.bio-info {
+  grid-row: 3 / 3;
+  grid-column: 4 / 5;
+  font-family: "Inter-Regular";
+  font-size: 14px;  
+}
+
+.bio-info a {
+  text-decoration: none;
+  color: #0d1824;  
+}
+
+.bio-info img {
+  max-width: 100%;
+  height: auto;
+}
+
+.bio-content {
+  grid-row: 3 / 3;
+  grid-column: 5 / 10;
+  font-family: "Garamond";
+  font-size: 18px;
+  text-align: justify;
+  text-justify: inter-word;  
+  padding-left: 3%; 
+}
+
+.bio-content img {
+  max-width: 100%;
+  height: auto;    
+  margin-bottom: 16px;
+}
+
+.bio-content p {
+  margin-top: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #0d1824;  
+}
+
+.bio-cv {
+  font-family: "Inter-Regular";
+  font-size: 14px;  
+}
+
+/* publications */
+
+.publications-content {
+  grid-row: 3 / 3;
+  grid-column: 5 / 10;  
+  font-family: "Garamond";
+  font-size: 18px;  
+  padding-left: 3%;
+  text-align: justify;
+  text-justify: inter-word;    
+}
+
+.publications-info {
+  grid-row: 3 / 3;
+  grid-column: 4 / 5;
+  font-family: "Inter-Regular";
+  font-size: 14px;  
+  padding-top: 5px;
+}
+
+.publications-info a {
+  text-decoration: none;
+  color: #0d1824;  
+}
+
+.publications-info img {
+  max-width: 100%;
+  height: auto;
+}
+
+.publications-info img:hover {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.these {
+  margin-top: 0px;
+}
+
+.award {
+  font-size: 16px;
+}
+
+.publications-content p {
+  margin-top: 0px;
+}
+
+hr {
+  width: 4%;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  border-top: 0px solid #0d1824;
+}
+
+.publications-content img {
+  max-width: 100%;
+  height: auto;  
+  margin-bottom: 16px;
+}
+
+.icon {
+  font-size: 13px;
+}
+
+.end {
+  font-size: 10px;
+  text-align: center;
+}
+
+/* peripeties */
+
+:root {
+  --card-gap: 10px;
+  --min-card-width: 150px;
+}
+
+.peripeties {
+  grid-row: 3 / 3;
+  grid-column: 4 / 10;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--min-card-width), 1fr));
+  grid-column-gap: var(--card-gap);
+  grid-row-gap: var(--card-gap);
+}
+
+.grid > div {
+  cursor: pointer;
+}
+
+/*card*/
+
+.card {
+  font-family: "Inter-Regular";
+  font-size: 14px;  
+}
+
+.card-img {
+  width: 100%;
+  height: auto;   
+}
+
+.card-img:hover {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.card-year {
+  font-family: "Inter-Bold";
+}
+
+/*focus*/
+
+.focus {
+  /*padding*/
+  padding: 10px;
+  background: #f5eee6;
+  /*border*/
+  margin-bottom: 10px;
+/*  border-width: 1.5px;
+  border-bottom-style: dashed;*/
+}
+
+.focus-header {
+  margin-top: 0px;
+}
+
+.focus-year {
+  font-size: 14px;
+  font-family: "Inter-Bold"
+}
+
+.focus-title {
+  font-size: 15px;
+  font-family: "Inter-Regular"
+}
+
+.focus-content {
+  font-size: 13px;
+  font-family: "Inter-Regular" 
+}
+
+.focus-close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
 }

@@ -1,4 +1,0 @@
-## Note 
-
-img index > width = 680px
-img bio   > width = 300px
